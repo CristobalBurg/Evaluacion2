@@ -1,31 +1,165 @@
-                       <div class="card text-white cardIndex">
-                            <img class="card-img-top img-fluid" src="{% static 'core/images/CardBlackWidow1.jpg'%}" alt="Black Widow">
-                            <div class="text-center">
-                                <img class="img-fluid rounded-circle imagen_central" src="{% static 'core/images/fondoIndex7.jpg'%}" alt="Imagen central" width="100px" height="100px">
-                            </div>
-                            <div class=" card-body">
-                                <ul class="list-group border border-danger bg-dark text-white ">
-                                    <li class="list-group-item bg-dark "><strong> Nombre real:  </strong><span class="float-right "> Natasha Romanoff</span> </li>
-                                    <li class="list-group-item bg-dark "><strong> Alias:  </strong><span class="float-right ">Black Widow</span> </li>
-                                    <li class="list-group-item bg-dark "><strong> Superpoder:  </strong> <span class="float-right ">Agilidad sobrehumana </span></li>
-                                    <li class="list-group-item bg-dark "><strong>1er Cómic:</strong> <span class="float-right "> <a href="https://www.marvel.com/comics/characters/1009189/black_widow " target="_blank "> Black  Widow:
-                                            Deadly Origin</a></span></li>
-                                    </li>
-                                    <li class="list-group-item bg-dark "><strong>1er Película MCU:</strong> <span class="float-right "> <a > Black Widow (Próximamente)</a></span></li>
-                                    <li class="list-group-item bg-dark "><strong> Raza:</strong><span class="float-right ">Humano</span> </li>
-                                    <li class="list-group-item bg-dark "><strong> Estado:   </strong><span class="float-right ">Muerto <i class="fas fa-skull-crossbones text-danger "></i></span> </li>
-                                </ul>
-                            </div>
-                            <div class="card-footer text-center">
-                                <div class="btn-group">
-                                    <a href="widow" target="_self">
-                                        <button type="button" class="btn btn-dark text-white" style="border: 2px solid white;">Más info</button>
-                                    </a>
-                                    <a href="https://marvelcinematicuniverse.fandom.com/es/wiki/Natalia_Romanoff" target="_blank">
-                                        <button type="button" class="btn btn-dark text-white" style="border: 2px solid white" ;>
-                                            Wiki    
-                                        </button>
-                                    </a>
-                                </div>
+
+
+
+<!DOCTYPE html>
+<html lang="es-cl">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Avengers</title>
+    {% load static %}
+    <link rel="icon" src="{% static 'core/images/iconA.png'%}" type="images/png">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'core/css/Styles.css'%}">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+    <script src="{% static 'core/js/reloj-dolar.js'%}"></script>
+</head>
+
+<body class="bg-image-Nos" onload="reloj()">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-image-nav">
+        <a class="navbar " href="/">
+            <img src="{% static 'core/images/iconA.png'%}" width="50" height="50" alt="" loading="lazy" href="/">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <!--<span class="navbar-toggler-icon "></span> -->
+            <i class="fa fa-list text-white" ></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto text-white">
+            
+                <li class="nav-item active">
+                    <a class="navbar-brand btn btn-primary text-dark font-weight-bold btn-block" style="border: 2px solid black ;" href="/">The Avengers</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="navbar-brand btn btn-success text-dark font-weight-bold  btn-block" style="border: 2px solid black ;" dropdown-toggle href="#" id="dropdownNavbar" data-toggle="dropdown">SuperHéroes</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item bg-danger " href="iron" target="_self"><img src="{% static 'core/images/iconIronman.ico'%}" width="25" height="25" alt=""> Ironman </a>
+                        <a class="dropdown-item bg-warning" href="thor" target="_self"> <img src="{% static 'core/images/iconThor.ico'%}" width="25" height="25" alt=""> Thor</a>
+                        <a class="dropdown-item bg-primary" href="capi" target="_self"> <img src="{% static 'core/images/iconCaptain.ico'%}" width="25" height="25" alt=""> Capitán América</a>
+                        <a class="dropdown-item bg-success" href="hulk" target="_self"> <img src="{% static 'core/images/iconHulk.ico'%}" width="25" height="25" alt=""> Hulk</a>
+                        <a class="dropdown-item bg-dark text-white" href="widow" target="_self"><img src="{% static 'core/images/iconWidow.ico'%}" width="25" height="25" alt=""> Black Widow </a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="navbar-brand btn btn-dark text-light font-weight-bold  btn-block" style="border: 2px solid black;" href="lista">Heroes Agregados desde la BD</a>
+
+                </li>
+
+            </ul>
+            <div id="reloj" class="text-white mr-3">
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+    <div class="row">
+     {% block cardHeroe %}
+{% for heroe in heroes%}
+<div class="col-sm-3">
+<div class="card text-white cardIndex">
+     <img class="card-img-top img-fluid" src="{{heroe.imagen.url}}" alt="{{heroe.nombre}}">
+     <div class="text-center">
+         <img class="img-fluid rounded-circle imagen_central" src="{{heroe.logo.url}}" alt="Imagen central" width="100px" height="100px">
+     </div>
+     <div class=" card-body">
+         <ul class="list-group border border-danger bg-dark text-white ">
+             <li class="list-group-item bg-dark "><strong> Nombre real:  </strong><span class="float-right ">{{heroe.nombre}}</span> </li>
+             <li class="list-group-item bg-dark "><strong> Alias:  </strong><span class="float-right ">{{heroe.alias}}</span> </li>
+             <li class="list-group-item bg-dark "><strong> Superpoder:  </strong> <span class="float-right ">{{heroe.superpoder}}</span></li>
+             <li class="list-group-item bg-dark "><strong>1er Cómic:</strong> <span class="float-right "> <a href="https://www.marvel.com/comics/characters/1009189/black_widow " target="_blank ">
+                  {{heroe.comic}}</a></span></li>
+             </li>
+             <li class="list-group-item bg-dark "><strong>1er Película MCU:</strong> <span class="float-right "> <a >{{heroe.pelicula}}</a></span></li>
+             <li class="list-group-item bg-dark "><strong> Raza:</strong><span class="float-right ">{{heroe.raza}}</span> </li>
+             <li class="list-group-item bg-dark "><strong> Estado:   </strong><span class="float-right ">{{heroe.estado}} <i class="fas fa-skull-crossbones text-danger "></i></span> </li>
+         </ul>
+     </div>
+     <div class="card-footer text-center">
+         <div class="btn-group">
+             <a href="widow" target="_self">
+                 <button type="button" class="btn btn-dark text-white" style="border: 2px solid white;">Más info</button>
+             </a>
+             <a href="https://marvelcinematicuniverse.fandom.com/es/wiki/Natalia_Romanoff" target="_blank">
+                 <button type="button" class="btn btn-dark text-white" style="border: 2px solid white" ;>
+                     Wiki    
+                 </button>
+             </a>
+         </div>
+     </div>
+ </div>
+
+</div>
+
+
+{% endfor %}
+{% endblock cardHeroe %}
+
+    
+    </div>
+    </div>
+
+
+
+    <footer class="footer" style="border-top: 2px solid black; ">
+        <div class="container-fluid text-center text-md-left bg-image-footer">
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-md-12 col-sm-12">
+                    <div class="card mt-3 mb-3" style="border: 2px solid black;">
+                        <div class="card-body text-center ">
+                            <img src="{% static 'core/images/Avengers-Logo.png'%}" width="60%" height="60%" alt="">
+                        </div>
+                        <div class="card-footer text-center ">
+                            <div class="btn-group">
+                                <a href="../html/Index.html">
+                                    <button type="button" class="btn btn-dark text-white ">Pagina Principal</button>
+                                </a>
+                                <a href="../html/formulario.html">
+                                    <button type="button" class="btn btn-dark text-white mx-4">Unete!</button>
+                                </a>
+                                <a href="../html/Nosotros.html">
+                                    <button type="button" class="btn btn-dark text-white ">Sobre nosotros</button>
+                                </a>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-12 col-sm-12">
+                    <div class="card mt-3 mb-3" style="border: 2px solid black;">
+                        <form name="converter" class="text-white">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="col-md-12 mx-2  my-2">
+                                        <p class="card-text text-black-50 "><strong>Conversor: </strong>Por ser un Avenger te pagamos $2.000 CLP por Hora. Aquí lo podrás calcular según tu moneda de cambio.</p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-11 mx-4">
+                                            <input type="text" class="form-control mb-3" name="peso" id="peso" placeholder="Ingrese monto en CLP">
+                                        </div>
+                                        <div class="col-md-11 mx-4">
+                                            <select id="select" class="custom-select " onchange="usdfunc(event);">
+                                            <option selected disabled> Seleccione Moneda</option>
+                                            <option value="dolar" >Dolar</option> 
+                                            <option value="euro" >Euro</option> 
+                                        </select>
+                                        </div>
+                                        <div class="col-md-12 mt-2">
+                                            <h6 id="output"></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>

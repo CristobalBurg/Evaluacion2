@@ -26,6 +26,7 @@ urlpatterns = [
     path('iron', views.ironman, name="ironman"),
     path('hulk', views.hulk, name="hulk"),
     path('widow', views.widow, name="widow"),
+    path('lista', views.heroeCard, name="heroes"),
 
 
     
