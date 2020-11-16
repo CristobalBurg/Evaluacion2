@@ -1,0 +1,76 @@
+{% extends 'core/base.html'%} 
+
+{% block bgImage %}
+bg-image-cap
+{% endblock bgImage %}
+
+{% block nombre%}Steve Rogers{% endblock %}
+{% block alias%}Capitán América{% endblock %}
+{% block superpoder%}Super Fuerza{% endblock %} 
+{% block comic%}Captain America Comics #1{% endblock %} 
+{% block peli%}Capitán América: El primer Vengador{% endblock %}
+{% block raza%}Humano{% endblock %}
+{% block estado %}Vivo{% endblock %}
+
+{% block urlComic %}
+https://es.wikipedia.org/wiki/Capit%C3%A1n_Am%C3%A9rica
+{% endblock urlComic %}
+
+{% block urlPelicula %}
+https://es.wikipedia.org/wiki/Capit%C3%A1n_Am%C3%A9rica:_El_primer_vengador
+{% endblock urlPelicula %}
+
+{% block biografia %}
+                                <small>
+                                <p class="text-white">Capitán América cuyo nombre real es Steven «Steve» Grant
+                                    Rogers, es un superhéroe ficticio que aparece en los cómics estadounidenses
+                                    publicados por Marvel Comics. Creado por los historietistas Joe Simon y Jack
+                                    Kirby, el personaje apareció por primera vez en Captain America Comics #1 de
+                                    Timely Comics, predecesor de Marvel Comics. El Capitán América fue diseñado como
+                                    un supersoldado patriota que luchaba frecuentemente contra las potencias del Eje
+                                    en la Segunda Guerra Mundial, y fue el personaje más popular de Timely Comics
+                                    durante el período de guerra. La popularidad de los superhéroes se desvaneció
+                                    después de la guerra, y el cómic del Capitán América dejó de editarse en 1950,
+                                    con un breve resurgimiento en 1953.</p>
+                            </small>
+                                <small>
+                                <p class="text-white">Desde que Marvel Comics revivió al personaje en 1964, el
+                                    Capitán América se ha mantenido en publicación. El Capitán América viste un
+                                    traje que lleva un motivo de la bandera de los Estados Unidos, y utiliza un
+                                    escudo casi indestructible que lanza como proyectil. El Capitán América fue el
+                                    primer personaje de Marvel Comics que apareció en medios fuera de los cómics con
+                                    el estreno de la serie de 1944, Capitán América.
+                                </p>
+                            </small>
+{% endblock biografia %}
+
+{% block fuerza %}90%
+{% endblock fuerza %}
+{% block fuerzaProgress %}90%
+{% endblock fuerzaProgress %}
+
+{% block inteligencia %}86%
+{% endblock inteligencia %}
+{% block inteligenciaProgress %}86%
+{% endblock inteligenciaProgress %}
+
+{% block agilidad %}88%
+{% endblock agilidad %}
+{% block agilidadProgress %}88%
+{% endblock agilidadProgress %}
+
+{% block resistencia %}75%
+{% endblock resistencia %}
+{% block resistenciaProgress %}75%
+{% endblock resistenciaProgress %}
+
+
+{% block urlLogo %}
+{% load static %}
+{% static 'core/images/logocap.png'%}
+{% endblock urlLogo %}
+
+{% block urlIcon %}
+{% load static %}
+{% static 'core/images/capicon.png'%}
+{% endblock urlIcon %}

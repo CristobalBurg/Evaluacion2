@@ -1,0 +1,68 @@
+{% extends 'core/base.html'%} 
+
+{% block bgImage %}
+bg-image-hulk
+{% endblock bgImage %}
+
+{% block nombre%}Bruce Banner{% endblock %}
+{% block alias%}Hulk{% endblock %}
+{% block superpoder%}Fuerza descomunal{% endblock %} 
+{% block comic%}The Incredible Hulk #1{% endblock %} 
+{% block peli%}The Incredible Hulk (2008){% endblock %}
+{% block raza%}Humano mutado{% endblock %}
+{% block estado %}Vivo{% endblock %}
+
+{% block urlComic %}
+https://marvel.fandom.com/wiki/Incredible_Hulk_Vol_1_1
+{% endblock urlComic %}
+
+{% block urlPelicula %}
+https://es.wikipedia.org/wiki/The_Incredible_Hulk_(pel%C3%ADcula)
+{% endblock urlPelicula %}
+
+{% block biografia %}
+    <div class="card-body" style="text-align: justify;">
+          <small>
+          <p class="text-white">Bruce Banner es un científico que trabajaba en una bomba de radiación Gamma para el ejercito estadounidense. 
+              Bruce quedó expuesto a cantidades extremas de radiación Gamma que alteraron la estructura de su ADN luego de un accidente. 
+              Cuando Bruce se enoja, éste se transforma en una criatura de color verde (a veces gris) con poderes increíbles que aumentaban su 
+              capacidad fisica al que le apodaron Hulk.
+              Betty Ross, parece ser la única persona que puede volverlo a la normalidad, pero ella era la hija del General Thunderbolt Ross,
+              quien busca la manera de detener a Hulk, con la esperanza de entregarlo a la justicia o destruirlo por completo.
+              Es una de las criaturas más poderosas que existe, y la más fuerte.</p>
+         </small>
+      </div> 
+{% endblock biografia %}
+
+{% block fuerza %}100%
+{% endblock fuerza %}
+{% block fuerzaProgress %}100%
+{% endblock fuerzaProgress %}
+
+{% block inteligencia %}97%
+{% endblock inteligencia %}
+{% block inteligenciaProgress %}97%
+{% endblock inteligenciaProgress %}
+
+{% block agilidad %}75%
+{% endblock agilidad %}
+{% block agilidadProgress %}75%
+{% endblock agilidadProgress %}
+
+{% block resistencia %}100%
+{% endblock resistencia %}
+{% block resistenciaProgress %}100%
+{% endblock resistenciaProgress %}
+
+
+{% block urlLogo %}
+{% load static %}
+{% static 'core/images/hulkLogo.png'%}
+{% endblock urlLogo %}
+
+{% block urlIcon %}
+{% load static %}
+{% static 'core/images/hulkIcon.ico'%}
+{% endblock urlIcon %}
+
+

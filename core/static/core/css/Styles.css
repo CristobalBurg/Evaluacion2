@@ -1,0 +1,176 @@
+.navbar-toggler {
+    height: 45px;
+    background-color: black;
+}
+
+.navbar-brand {
+    border: 2px solid black;
+}
+
+.dropdown-item {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.bg-image {
+    background-image: url('../images/fondo.jpg');
+    width: 100%;
+    height: 100%;
+}
+
+.bg-image-nav {
+    background-image: url('../images/navbar3.jpg');
+    width: 100%;
+    height: 100%;
+}
+
+
+/*Index*/
+
+.bg-image-index {
+    background-image: url('../images/fondoIndex.jpg');
+    width: 100%;
+    height: 100%;
+}
+
+.carousel {
+    border: 4px solid white;
+}
+
+.imagen_central {
+    margin-top: -50px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+}
+
+.cardIndex {
+    border: 4px solid white;
+    background-color: rgb(22, 22, 22);
+}
+
+@media (max-width: 767px) {
+    .logoIndex {
+        display: none;
+    }
+}
+
+
+/*Ironman*/
+
+.bg-image-ironman {
+    background-image: url('../images/fondoIronamn.png');
+    width: 100%;
+    height: 100%;
+}
+
+.logoIronman {
+    display: block;
+}
+
+@media (max-width: 1000px) {
+    .logoIronman {
+        display: none;
+    }
+}
+
+
+/*Hulk*/
+
+.bg-image-hulk {
+    background-image: url('../images/fondoHulk.jpg');
+    width: 100%;
+    height: 100%;
+}
+
+.logoHulk {
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .logoHulk {
+        display: none;
+    }
+}
+
+.bg-image-footer {
+    background-image: url('../images/navbar3.jpg');
+    width: 100%;
+    height: 100%;
+}
+
+
+/*Thor*/
+
+<!-- .bg-image-Thor {
+    background-image: url('../images/FondoThor1.jpg');
+    width: 100%;
+    height: 100%;
+}
+
+.logoThor {
+    display: block;
+}
+
+@media (max-width: 1000px) {
+    .logoThor {
+        display: none;
+    }
+}
+
+
+/*Nosotros*/
+
+.bg-image-Nos {
+    background-image: url('../images/fn.jpg');
+    width: 100%;
+    height: 100%;
+}
+
+
+/*Capitan America*/
+
+.bg-image-cap {
+    background-image: url('../images/capfondo.jpg');
+    width: 100%;
+    height: 100%;
+}
+
+.logocap {
+    background-image: url('../images/fondocap.jpg');
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1000px) {
+    .logocap {
+        display: none;
+    }
+}
+
+
+/*BlackWidow*/
+
+.bg-image-viudanegra {
+    background-image: url("https://images.alphacoders.com/106/thumb-1920-1069901.jpg");
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logobw {
+    display: block;
+}
+
+@media (max-width: 1000px) {
+    .logobw {
+        display: none;
+    }
+}
+
+.dropdown-menu {
+    padding: 0;
+    margin: 0;
+    border: none;
+}

@@ -16,9 +16,22 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from core import views
+from django.conf import settings
 
 urlpatterns = [
      
-    path('', views.login, name="login"),
+    path('', views.index, name="index"),
+    path('capi', views.capitan, name="capitan"),
+    path('thor', views.thor, name="thor"),
+    path('iron', views.ironman, name="ironman"),
+    path('hulk', views.hulk, name="hulk"),
+    path('widow', views.widow, name="widow"),
+
+
+    
     path('admin/', admin.site.urls),
 ]
+
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
