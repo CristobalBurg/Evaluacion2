@@ -62,40 +62,40 @@
             <div class="col-sm-4">
             </div>
             <div class="col-md-4 mt-2">
+                {% if 'OK' in request.GET%}
+                <span class="badge badge-pill badge-success">  Mensaje Enviado Correctamente ! , en breve te contactamos!  </span>
+                {% endif %}
+                {% if 'FAIL' in request.GET%}
+                <span class="badge badge-pill badge-danger"> Error al enviar el correo!   </span>
+                {% endif %}
+
+                
+            
                 <form class="text-light " id="formularioAvengers" onsubmit="mensaje()" method="POST">
+                    {% csrf_token %}
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="nombre"><span class="badge badge-pill badge-warning">Nombre</span> </label>
-                            <input type="text" class="form-control" id="nombre" name="nombre">
+                            {{form.name}}
                         </div>
+                        {{form.name.errors}}
                         <div class="form-group col-md-6">
                             <label for="email"><span class="badge badge-pill badge-warning">Correo</span> </label>
-                            <input type="email" class="form-control" id="email" name="email">
+                            {{form.email}}
                         </div>
+                        {{form.email.errors}}
                     </div>
                     <div class="form-row">
+                            <label for="comentario"><span class="badge badge-pill badge-warning">Comentario</span> </label>
 
                         <div class="form-group col-md-12">
-                            <label for="comentario"><span class="badge badge-pill badge-warning">Comentario</span> </label>
-                            <textarea class="form-control" id="comentario" name="comentario" rows="3"></textarea>
+                            {{form.mensaje}}
                         </div>
+                        {{form.mensaje.errors}}
                     </div>
                     <div class="form-row mb-5   ">
-                        <button type="submit" class="btn btn-success btn-block text-white"><b>Registrarse!</b> </button>
+                        <button type="submit" class="btn btn-success btn-block text-white" name="enviar" id="enviar" value="Enviar"><b>Registrarse!</b> </button>
                     </div> 
-                </form>
-                {% if 'OK' in request.GET%}
-                <span class="badge badge-waning badge-pill">  Mensaje Enviado Correctamente ! , en breve te contactamos!  </span>
-                    {% else %}
-                     <p class="text-danger"> Error! </p> 
-                {% endif %}
-                <form action="" method="POST">
-                 {% csrf_token %}
-                <table>
-                    {{form.as_table}}
-                </table>
-                <input type="submit" name="enviar" id="enviar" value="Enviar">
-                {{request.POST}}
                 </form>
             </div>
             <div class="col-sm-4">
