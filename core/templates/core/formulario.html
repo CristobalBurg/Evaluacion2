@@ -62,7 +62,7 @@
             <div class="col-sm-4">
             </div>
             <div class="col-md-4 mt-2">
-                {% comment %} <form class="text-light " id="formularioAvengers" onsubmit="mensaje()" method="POST">
+                <form class="text-light " id="formularioAvengers" onsubmit="mensaje()" method="POST">
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="nombre"><span class="badge badge-pill badge-warning">Nombre</span> </label>
@@ -83,7 +83,7 @@
                     <div class="form-row mb-5   ">
                         <button type="submit" class="btn btn-success btn-block text-white"><b>Registrarse!</b> </button>
                     </div> 
-                </form> {% endcomment %}
+                </form>
                 {% if 'OK' in request.GET%}
                 <span class="badge badge-waning badge-pill">  Mensaje Enviado Correctamente ! , en breve te contactamos!  </span>
                     {% else %}

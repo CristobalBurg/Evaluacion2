@@ -22,6 +22,10 @@ def formulario(request):
     if request.method == 'POST':
         contact_form = ContactForm(data=request.POST)
         if contact_form.is_valid():
+            name = request.POST.get('name','')
+            email = request.POST.get('email','')
+            mensaje = request.POST.get('mensaje','')
+
             return redirect(reverse('form') + '?OK')
     return render(request,"core/formulario.html",{"form":contact_form})
 
