@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es-cl">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,9 +15,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
     <script src="{% static 'core/js/reloj-dolar.js'%}"></script>
+
 </head>
 
-<body class="{% block bgImage %}{% endblock bgImage %}" onload="reloj()">
+<body class="bg-image" onload="reloj()">
     <nav class="navbar navbar-expand-lg navbar-dark bg-image-nav">
         <a class="navbar " href="/">
             <img src="{% static 'core/images/iconA.png'%}" width="50" height="50" alt="" loading="lazy" href="/">
@@ -45,8 +45,9 @@
                 </li>
                 <li class="nav-item active">
                     <a class="navbar-brand btn btn-dark text-light font-weight-bold  btn-block" style="border: 2px solid black;" href="lista">Heroes Agregados desde la BD</a>
+
                 </li>
-  <li class="nav-item active">
+                  <li class="nav-item active">
                     <a class="navbar-brand btn btn-success text-light font-weight-bold  btn-block" style="border: 2px solid green;" href="form">Formulario</a>
                 </li>
 
@@ -56,92 +57,53 @@
         </div>
     </nav>
 
-
-    <div class="container-fluid mt-2 ml-2">
+    <div class="container-fluid">
         <div class="row ">
-            <div class="col-md-3 col-sm-12" style="font-size: small;">
-                <div class="row">
-                    <div class="col-md-12">
-                        <ul class="list-group border border-danger bg-dark text-white">
-                            <li class="list-group-item bg-dark "><strong> Nombre real:  </strong><span class="float-right">{% block nombre%}{% endblock %}</span> </li>
-                            <li class="list-group-item bg-dark "><strong> Alias:  </strong><span class="float-right">{% block alias%}{% endblock %}</span> </li>
-                            <li class="list-group-item  bg-dark"><strong> Superpoder:  </strong> <span class="float-right">{% block superpoder%}{% endblock %} </span></li>
-                            <li class="list-group-item  bg-dark"><strong>1er Cómic:</strong> <span class="float-right"> <a href="{% block urlComic %}
-                            {% endblock urlComic %}" target="_blank"> {% block comic%}{% endblock %}</a></span></li>
-                            <li class="list-group-item  bg-dark"><strong>1er Película MCU:</strong> <span class="float-right"> <a href="{% block urlPelicula %}
-                            {% endblock urlPelicula %}" target="_blank">  {% block peli%}{% endblock %}</a></span></li>
-                            <li class="list-group-item  bg-dark"><strong> Raza:</strong><span class="float-right">{% block raza%}{% endblock %}</span> </li>
-                            <li class="list-group-item  bg-dark"><strong> Estado:   </strong><span class="float-right">{% block estado%}{% endblock %} <i class="fas fa-skull-crossbones text-danger"></i></span> </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-12 col-sm-12">
-                        <div class="card  bg-dark mt-2 border border-danger">
-                            <div class="card-body ">
-                                <ul class="list-group ">
-                                    <li class="list-group-item bg-dark text-white "><strong> Fuerza: </strong><span class="float-right">{% block fuerza %}
-                                    {% endblock fuerza %}</span>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-danger" role="progressbar" style="width: {% block fuerzaProgress %}
-                                            {% endblock fuerzaProgress %}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item  bg-dark text-white"><strong>  Inteligencia: </strong><span class="float-right">{% block inteligencia %}
-                                    {% endblock inteligencia %}</span>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-success" role="progressbar" style="width: {% block inteligenciaProgress %}
-                                            {% endblock inteligenciaProgress %}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item  bg-dark text-white"><strong>  Resistencia:  </strong> <span class="float-right">{% block resistencia %}
-                                    {% endblock resistencia %}</span>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-warning" role="progressbar" style="width: {% block resistenciaProgress %}
-                                            {% endblock resistenciaProgress %}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item  bg-dark text-white"><strong>  Agilidad:</strong><span class="float-right">{% block agilidad %}
-                                    {% endblock agilidad %}</span>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-warning" role="progressbar" style="width: {% block agilidadProgress %}
-                                            {% endblock agilidadProgress %}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-sm-4">
             </div>
-
-            <div class="col-md-5 col-sm-12">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12">
-                        <div class="card bg-dark border border-danger mt-2">
-                            <div class="card-header">
-                                <h4 class="text-white">Biografía <span class="float-right">  <img src="{% block urlIcon %}
-                                {% endblock urlIcon %}" width="100" height="50"></span></h4>
-                            </div>
-                            <div class="card-body text-justify">
-                                <small>
-                            <p class=" text-white " >{% block biografia%}{% endblock %}</p>
-                           </small>
-
-                            </div>
+            <div class="col-md-4 mt-2">
+                {% comment %} <form class="text-light " id="formularioAvengers" onsubmit="mensaje()" method="POST">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="nombre"><span class="badge badge-pill badge-warning">Nombre</span> </label>
+                            <input type="text" class="form-control" id="nombre" name="nombre">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="email"><span class="badge badge-pill badge-warning">Correo</span> </label>
+                            <input type="email" class="form-control" id="email" name="email">
                         </div>
                     </div>
-                    <div class="col-md-12 col-sm-12 mt-3 logoIronman " id="imgNombre ">
-                        <img src="{% block urlLogo %}
-                        {% endblock urlLogo %}" height="200px " width="800px " class="logoIronman ">
+                    <div class="form-row">
+
+                        <div class="form-group col-md-12">
+                            <label for="comentario"><span class="badge badge-pill badge-warning">Comentario</span> </label>
+                            <textarea class="form-control" id="comentario" name="comentario" rows="3"></textarea>
+                        </div>
                     </div>
-                </div>
+                    <div class="form-row mb-5   ">
+                        <button type="submit" class="btn btn-success btn-block text-white"><b>Registrarse!</b> </button>
+                    </div> 
+                </form> {% endcomment %}
+                {% if 'OK' in request.GET%}
+                <span class="badge badge-waning badge-pill">  Mensaje Enviado Correctamente ! , en breve te contactamos!  </span>
+                    {% else %}
+                     <p class="text-danger"> Error! </p> 
+                {% endif %}
+                <form action="" method="POST">
+                 {% csrf_token %}
+                <table>
+                    {{form.as_table}}
+                </table>
+                <input type="submit" name="enviar" id="enviar" value="Enviar">
+                {{request.POST}}
+                </form>
+            </div>
+            <div class="col-sm-4">
             </div>
         </div>
     </div>
 
-
-
-
-    <footer class="footer" style="border-top: 2px solid black; ">
+<footer class="footer" style="border-top: 2px solid black; ">
         <div class="container-fluid text-center text-md-left bg-image-footer">
             <div class="row justify-content-center">
                 <div class="col-lg-5 col-md-12 col-sm-12">
@@ -151,7 +113,7 @@
                         </div>
                         <div class="card-footer text-center ">
                             <div class="btn-group">
-                                <a href="../html/Index.html">
+                                <a href="/">
                                     <button type="button" class="btn btn-dark text-white ">Pagina Principal</button>
                                 </a>
                                 <a href="../html/formulario.html">

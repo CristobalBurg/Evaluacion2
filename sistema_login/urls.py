@@ -27,6 +27,8 @@ urlpatterns = [
     path('hulk', views.hulk, name="hulk"),
     path('widow', views.widow, name="widow"),
     path('lista', views.heroeCard, name="heroes"),
+    path('form', views.formulario, name="form"),
+
 
 
     

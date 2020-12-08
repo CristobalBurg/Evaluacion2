@@ -1,5 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.urls import reverse
+from .forms import ContactForm
 from .models import Heroe
+
 
 # Create your views here.
 def index(request):
@@ -14,6 +17,13 @@ def hulk(request):
     return render(request,"core/hulk.html")
 def widow(request):
     return render(request,"core/widow.html")
+def formulario(request):
+    contact_form = ContactForm()
+    if request.method == 'POST':
+        contact_form = ContactForm(data=request.POST)
+        if contact_form.is_valid():
+            return redirect(reverse('form') + '?OK')
+    return render(request,"core/formulario.html",{"form":contact_form})
 
 def heroeCard(request):
     heroes = Heroe.objects.all()
